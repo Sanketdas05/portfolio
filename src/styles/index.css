@@ -1,0 +1,373 @@
+@import "tailwindcss";
+@source "../**/*.{js,jsx,ts,tsx}";
+@source "../../index.html";
+
+/* ──────────────────────────────────────────────
+   FONT — Loaded via <link> in index.html
+   Space Grotesk (single family for everything)
+   ────────────────────────────────────────────── */
+
+/* ──────────────────────────────────────────────
+   DESIGN TOKENS — CSS Custom Properties
+   ────────────────────────────────────────────── */
+
+:root {
+  /* ── Typography ── */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  /* Font sizes — fluid scale (clamp) */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.3vw, 0.9rem);
+  --text-base: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
+  --text-lg: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  --text-xl: clamp(1.3rem, 1.1rem + 0.9vw, 1.75rem);
+  --text-2xl: clamp(1.6rem, 1.3rem + 1.5vw, 2.5rem);
+  --text-3xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  --text-4xl: clamp(2.5rem, 1.8rem + 3.5vw, 5rem);
+  --text-5xl: clamp(3rem, 2rem + 5vw, 7rem);
+
+  /* Font weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line heights */
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+
+  /* ── Color Palette — Warm, Organic, Cinematic (Light Mode by default) ── */
+
+  /* Background layers (lightest → darkest) */
+  --color-bg-deep: #f2ede4;
+  --color-bg: #f7f4ee;
+  --color-bg-elevated: #fdfbf7;
+  --color-bg-surface: #eae4d8;
+
+  /* Foreground / text */
+  --color-text-primary: #1c1a17;
+  --color-text-secondary: #5e574f;
+  --color-text-muted: #918679;
+
+  /* Earthy accent — terracotta */
+  --color-accent: #b05329;
+  --color-accent-hover: #c4653a;
+  --color-accent-muted: rgba(176, 83, 41, 0.12);
+
+  /* Warm highlight — golden amber */
+  --color-warm: #b58535;
+  --color-warm-muted: rgba(181, 133, 53, 0.1);
+
+  /* Neutral / border tones */
+  --color-border: rgba(28, 26, 23, 0.08);
+  --color-border-hover: rgba(28, 26, 23, 0.15);
+  --color-border-active: rgba(176, 83, 41, 0.3);
+
+  /* Overlay / glassmorphism */
+  --color-overlay: rgba(247, 244, 238, 0.7);
+  --color-glass: rgba(253, 251, 247, 0.7);
+  --color-glass-border: rgba(28, 26, 23, 0.05);
+
+  /* ── Transition Timing ── */
+  --theme-transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                      color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                      border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                      backdrop-filter 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* ── Spacing Scale ── */
+  --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  --space-xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --space-2xl: clamp(4rem, 3rem + 5vw, 8rem);
+  --space-section: clamp(6rem, 4rem + 8vw, 12rem);
+
+  /* ── Layout ── */
+  --container-max: 1400px;
+  --container-padding: clamp(1.25rem, 1rem + 2vw, 3rem);
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions (timing functions) ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 700ms;
+  --duration-slower: 1000ms;
+
+  /* ── Z-Index Scale ── */
+  --z-base: 0;
+  --z-above: 10;
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-cursor: 400;
+  --z-canvas: -1;
+}
+
+/* ──────────────────────────────────────────────
+   DARK THEME OVERRIDES
+   ────────────────────────────────────────────── */
+
+.theme-dark {
+  /* Background layers (darkest → lightest) */
+  --color-bg-deep: #0a0908;
+  --color-bg: #0f0e0c;
+  --color-bg-elevated: #1a1816;
+  --color-bg-surface: #242220;
+
+  /* Foreground / text */
+  --color-text-primary: #f5f0eb;
+  --color-text-secondary: #b8ad9e;
+  --color-text-muted: #7a7167;
+
+  /* Earthy accent — warm terracotta/sienna */
+  --color-accent: #c4653a;
+  --color-accent-hover: #d67a52;
+  --color-accent-muted: rgba(196, 101, 58, 0.15);
+
+  /* Warm highlight — golden amber */
+  --color-warm: #d4a04a;
+  --color-warm-muted: rgba(212, 160, 74, 0.12);
+
+  /* Neutral / border tones */
+  --color-border: rgba(245, 240, 235, 0.08);
+  --color-border-hover: rgba(245, 240, 235, 0.15);
+  --color-border-active: rgba(196, 101, 58, 0.3);
+
+  /* Overlay / glassmorphism */
+  --color-overlay: rgba(10, 9, 8, 0.7);
+  --color-glass: rgba(26, 24, 22, 0.6);
+  --color-glass-border: rgba(245, 240, 235, 0.06);
+}
+
+/* ──────────────────────────────────────────────
+   BASE RESET & GLOBAL STYLES
+   ────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  transition: var(--theme-transition);
+}
+
+/* Let headers, paragraphs, links, buttons, and layouts transition their theme styles smoothly */
+h1, h2, h3, h4, h5, h6, p, a, button, section, hr, input, textarea {
+  transition: var(--theme-transition);
+}
+
+/* ── Typography Base ── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+}
+
+p {
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+::selection {
+  background-color: var(--color-accent-muted);
+  color: var(--color-text-primary);
+}
+
+/* ── Scrollbar (subtle) ── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ──────────────────────────────────────────────
+   TAILWIND v4 — Custom Theme Extension
+   ────────────────────────────────────────────── */
+
+@theme {
+  /* Expose tokens to Tailwind utility classes */
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  --color-bg-deep: var(--color-bg-deep);
+  --color-bg-default: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-surface: var(--color-bg-surface);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+
+  --color-warm: var(--color-warm);
+
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+}
+
+/* PROJECTS backdrop outline-to-solid hover microinteraction */
+#work h2 {
+  color: transparent !important;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: var(--color-accent) !important;
+}
+
+#work:hover h2 {
+  color: var(--color-accent) !important;
+  -webkit-text-stroke-color: transparent !important;
+}
+
+/* Live Demo link color custom override */
+.live-demo-link {
+  color: var(--color-accent) !important;
+}
+.live-demo-link:hover {
+  color: #000000 !important;
+}
+
+/* ── "From Lobby to Exhibition" Curtain Transition ── */
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #0a0908;
+  z-index: 50;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.curtain-left {
+  left: 0;
+}
+
+.curtain-right {
+  right: 0;
+}
+
+.curtain-overlay {
+  position: absolute;
+  inset: 0;
+  background: #0a0908;
+  z-index: 45;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+/* ──────────────────────────────────────────────
+   ARCHITECT'S NOTEBOOK AESTHETIC (ABOUT SECTION)
+   ────────────────────────────────────────────── */
+
+.notebook-paper {
+  background-color: #0a0908;
+  background-image: 
+    linear-gradient(rgba(245, 240, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 240, 235, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center top;
+  color: #f5f0eb;
+}
+
+.theme-dark .notebook-paper {
+  color: #f5f0eb;
+}
+
+.notebook-tab {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Hand-drawn SVG animation path utility */
+.svg-draw-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 2s ease-out forwards;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

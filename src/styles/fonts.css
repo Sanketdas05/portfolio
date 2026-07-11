@@ -1,0 +1,25 @@
+/*
+ * Font loading is handled via Google Fonts CDN in index.html.
+ *
+ * Font used:
+ * ─────────────────────────────────────────
+ * Space Grotesk (single family)    — 300..700
+ *   → Clean, techy grotesk by Florian Karsten
+ *   → Headings: weight 600–700, tight tracking
+ *   → Body: weight 300–400, normal tracking
+ *   → Labels/UI: weight 500, wide tracking, uppercase
+ * ─────────────────────────────────────────
+ *
+ * To self-host for production (better perf):
+ * 1. Download WOFF2 from https://fonts.google.com/specimen/Space+Grotesk
+ * 2. Place in src/assets/fonts/
+ * 3. Replace the <link> in index.html with @font-face:
+ *
+ * @font-face {
+ *   font-family: 'Space Grotesk';
+ *   src: url('../assets/fonts/SpaceGrotesk-Variable.woff2') format('woff2');
+ *   font-weight: 300 700;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
