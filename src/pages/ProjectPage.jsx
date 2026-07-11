@@ -131,7 +131,7 @@ export default function ProjectPage() {
             })}
 
             {(project.liveUrl || project.repoUrl) && (
-              <section className="py-20 md:py-32 min-h-[30svh] md:min-h-[60svh] w-full px-8 flex flex-col justify-center items-center bg-[var(--color-accent)] text-[#0a0908] relative overflow-hidden">
+              <section className="py-20 md:py-32 min-h-[30svh] md:min-h-[40svh] w-full px-8 flex flex-col justify-center items-center bg-[var(--color-accent)] text-[#0a0908] relative overflow-hidden">
                 <span className="absolute top-6 md:top-8 left-6 md:left-8 font-mono text-[10px] uppercase tracking-[0.3em] font-bold !text-[#0a0908] opacity-50">
                   Interactive Layer
                 </span>
@@ -158,7 +158,7 @@ export default function ProjectPage() {
               </section>
             )}
 
-            <section className="min-h-[25svh] md:min-h-[70svh] w-full px-4 md:px-16 flex flex-col justify-between pt-12 pb-12 md:pt-32 md:pb-24 text-center relative z-20 bg-[var(--color-bg)]">
+            <section className="min-h-[25svh] md:min-h-[40svh] w-full px-4 md:px-16 flex flex-col justify-between pt-12 pb-12 md:pt-32 md:pb-24 text-center relative z-20 bg-[var(--color-bg)]">
               <RouterLink to={`/work/${nextProject.slug}`} className="group w-full flex flex-col items-center pt-8 mt-6 md:pt-24 md:mt-16 border-t border-[rgba(255,255,255,0.05)] px-4">
                 <span className="font-mono text-[10px] uppercase tracking-[0.3em] font-bold text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)] transition-colors mb-4 text-center">
                   Continue to next exhibit
