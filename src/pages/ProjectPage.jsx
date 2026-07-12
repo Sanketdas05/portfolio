@@ -27,7 +27,7 @@ export default function ProjectPage() {
       document.body.classList.remove('theme-dark');
     }
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }, 50);
 
     return () => {
@@ -53,7 +53,7 @@ export default function ProjectPage() {
         // CREATIVE MODE
         // =========================================
         <motion.main
-          key="creative"
+          key={`creative-${project.slug}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -175,7 +175,7 @@ export default function ProjectPage() {
         // ENGINEERING MODE
         // =========================================
         <motion.main
-          key="engineering"
+          key={`engineering-${project.slug}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
