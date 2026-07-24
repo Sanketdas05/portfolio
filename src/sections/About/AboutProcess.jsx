@@ -30,7 +30,7 @@ const PROCESS_STEPS = [
 
 export default function AboutProcess() {
   return (
-    <div className="w-full relative py-32 pb-48 md:py-48 md:pb-64 flex flex-col items-center bg-[var(--color-bg)]">
+    <div className="w-full relative py-32 md:py-48 flex flex-col items-center bg-[var(--color-bg)] overflow-hidden">
 
       {/* Drafting Table Background */}
       <div className="absolute inset-0 pointer-events-none opacity-10">
@@ -63,7 +63,7 @@ export default function AboutProcess() {
       />
 
       {/* Cards wrapper — on mobile, single column; on desktop, wrap into rows */}
-      <div className="w-full max-w-7xl px-[var(--container-padding)] relative z-10 flex flex-col md:flex-wrap md:flex-row md:justify-center gap-12 md:gap-16 lg:gap-32 mt-16">
+      <div className="w-full max-w-7xl px-[var(--container-padding)] relative z-10 flex flex-col md:flex-wrap md:flex-row md:justify-center gap-12 md:gap-16 lg:gap-32 mt-16 mb-16">
         {PROCESS_STEPS.map((step, idx) => (
           <motion.div
             key={idx}
@@ -106,15 +106,8 @@ export default function AboutProcess() {
         ))}
       </div>
 
-      {/* Museum Annotation — static in flow on mobile, absolute on desktop */}
-      <div className="relative z-10 w-full max-w-7xl px-[var(--container-padding)] pt-16 pb-4 opacity-60 md:hidden">
-        <pre className="font-mono text-[9px] uppercase tracking-widest text-[#7a7167] leading-[1.6]">
-          FIELD NOTE 03
-          Documented process workflow
-          for creative development.
-        </pre>
-      </div>
-      <div className="absolute bottom-12 left-12 md:bottom-24 md:left-24 z-10 opacity-60 hidden md:block">
+      {/* Museum Annotation — in document flow on all screen sizes */}
+      <div className="relative z-10 w-full max-w-7xl px-[var(--container-padding)] pt-8 opacity-60">
         <pre className="font-mono text-[9px] uppercase tracking-widest text-[#7a7167] leading-[1.6]">
           FIELD NOTE 03
           Documented process workflow

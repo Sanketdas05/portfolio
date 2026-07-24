@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function AboutObservations() {
   return (
-    <div className="w-full min-h-[120vh] py-32 flex flex-col justify-start items-center px-[var(--container-padding)] relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
+    <div className="w-full min-h-[120vh] py-24 md:py-32 flex flex-col justify-start items-center px-[var(--container-padding)] relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
       
-      {/* Chapter Marker — in flow with distinct spacing above quotes */}
-      <div className="w-full max-w-5xl mb-12 md:mb-16 relative z-10">
+      {/* Chapter Marker — in flow with clear spacing above quotes */}
+      <div className="w-full max-w-5xl mb-8 md:mb-12 relative z-10">
         <span className="text-[10px] text-[var(--color-accent)] font-bold font-mono tracking-widest uppercase block">
           [ 05 / Observations ]
         </span>
@@ -21,7 +21,7 @@ export default function AboutObservations() {
           transition={{ duration: 1.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="w-full md:w-1/2 text-left pl-8 md:pl-16"
         >
-          <p className="font-mono text-[11px] md:text-[13px] top-3.5 text-[#7a7167] leading-[1.8] tracking-wider uppercase">
+          <p className="font-mono text-[11px] md:text-[13px] text-[#7a7167] leading-[1.8] tracking-wider uppercase">
             Users don't notice smooth easing.<br/>
             <span className="text-[#c4653a]">They notice when it feels wrong.</span>
           </p>
