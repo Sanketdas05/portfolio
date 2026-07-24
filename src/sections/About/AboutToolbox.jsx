@@ -115,7 +115,7 @@ export default function AboutToolbox() {
 
   return (
     <div 
-      className="w-full min-h-screen flex flex-col justify-start items-center px-6 md:px-12 relative overflow-hidden pb-32"
+      className="w-full min-h-screen flex flex-col justify-start items-center px-[var(--container-padding)] relative overflow-hidden pb-32"
       style={{ paddingTop: '25vh' }}
     >
       

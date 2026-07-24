@@ -50,7 +50,7 @@ export default function AboutProcess() {
       </div>
 
       {/* Chapter Marker */}
-      <div className="w-full max-w-7xl px-6 md:px-12 mb-32 md:mb-48 relative z-10">
+      <div className="w-full max-w-7xl px-[var(--container-padding)] mb-32 md:mb-48 relative z-10">
         <span className="text-[10px] text-[var(--color-accent)] font-bold font-mono tracking-widest uppercase block">
           [ 04 / Process ]
         </span>
@@ -67,7 +67,7 @@ export default function AboutProcess() {
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
       />
 
-      <div className="w-full max-w-7xl px-6 md:px-12 relative z-10 flex flex-wrap justify-center gap-16 md:gap-32 pb-32 mt-16">
+      <div className="w-full max-w-7xl px-[var(--container-padding)] relative z-10 flex flex-wrap justify-center gap-16 md:gap-32 pb-32 mt-16">
         {PROCESS_STEPS.map((step, idx) => (
           <motion.div 
             key={idx}

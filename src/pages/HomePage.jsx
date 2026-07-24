@@ -58,7 +58,7 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full pt-32 max-w-[var(--container-max)] mx-auto px-6 md:px-12"
+          className="w-full pt-32 max-w-[var(--container-max)] mx-auto px-[var(--container-padding)]"
           style={{ maxWidth: '1400px', margin: '0 auto', paddingTop: '8rem' }}
         >
           <BuildHero />

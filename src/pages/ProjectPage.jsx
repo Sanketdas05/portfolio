@@ -37,7 +37,7 @@ export default function ProjectPage() {
 
   if (!project) {
     return (
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12">
+      <section className="min-h-screen flex flex-col items-center justify-center px-[var(--container-padding)]">
         <h2 className="text-[24px] font-bold mb-4">Project Not Found</h2>
         <RouterLink to="/" className="text-[var(--color-accent)] hover:underline">Return Home</RouterLink>
       </section>
@@ -180,7 +180,7 @@ export default function ProjectPage() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full pt-24 md:pt-32 max-w-[var(--container-max)] mx-auto px-6 md:px-12 pb-24"
+          className="w-full pt-24 md:pt-32 max-w-[var(--container-max)] mx-auto px-[var(--container-padding)] pb-24"
           style={{ maxWidth: '1400px', margin: '0 auto', paddingTop: '8rem' }}
         >
           <RouterLink to="/#projects" className="inline-flex items-center gap-2 text-[14px] text-black/50 hover:text-black transition-colors mb-12">

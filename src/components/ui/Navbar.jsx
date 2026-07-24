@@ -69,7 +69,7 @@ export default function Navbar() {
         }`}
       >
         <div 
-          className="w-full mx-auto h-full px-6 md:px-12 flex items-center justify-between max-w-[var(--container-max)] relative"
+          className="w-full mx-auto h-full px-[var(--container-padding)] flex items-center justify-between max-w-[var(--container-max)] relative"
           style={{ position: 'relative' }}
         >
           

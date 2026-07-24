@@ -91,7 +91,7 @@ export default function AboutPrinciples() {
         {PRINCIPLES.map((principle, idx) => (
           <div 
             key={idx} 
-            className="w-screen flex flex-col justify-center items-center relative flex-shrink-0 px-6 md:px-12"
+            className="w-screen flex flex-col justify-center items-center relative flex-shrink-0 px-[var(--container-padding)]"
           >
             {/* Thematic Backgrounds */}
             {principle.id === 'gsap' && (

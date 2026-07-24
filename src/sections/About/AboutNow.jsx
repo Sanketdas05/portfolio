@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutNow() {
   return (
-    <div className="w-full min-h-screen py-32 flex flex-col justify-center items-center px-6 md:px-12 relative text-[#f5f0eb] overflow-hidden">
+    <div className="w-full min-h-screen py-32 flex flex-col justify-center items-center px-[var(--container-padding)] relative text-[#f5f0eb] overflow-hidden">
       
       {/* Stark Horizon Line Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40 flex items-center justify-center">

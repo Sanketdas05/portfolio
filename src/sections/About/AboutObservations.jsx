@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutObservations() {
   return (
-    <div className="w-full min-h-[120vh] py-32 flex flex-col justify-start items-center px-6 md:px-12 relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
+    <div className="w-full min-h-[120vh] py-32 flex flex-col justify-start items-center px-[var(--container-padding)] relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
       
       {/* Chapter Marker */}
       <div className="absolute top-12 left-12 md:top-24 md:left-24 z-10">
