@@ -371,39 +371,3 @@ strong {
     stroke-dashoffset: 0;
   }
 }
-
-/* ──────────────────────────────────────────────
-   ACCESSIBILITY — Reduced Motion
-   Respects OS-level "Reduce Motion" setting.
-   Kills CSS animations, transitions, and smooth
-   scroll for users who have opted out of motion.
-   Framer Motion respects this automatically via
-   its own useReducedMotion() hook internals.
-   ────────────────────────────────────────────── */
-
-@media (prefers-reduced-motion: reduce) {
-  /* Kill all CSS animations & transitions */
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  /* Also override our theme-transition tokens */
-  :root {
-    --theme-transition: none;
-    --duration-fast: 0ms;
-    --duration-base: 0ms;
-    --duration-slow: 0ms;
-    --duration-slower: 0ms;
-  }
-
-  /* Stop SVG path draw animation */
-  .svg-draw-path {
-    animation: none !important;
-    stroke-dashoffset: 0 !important;
-  }
-}

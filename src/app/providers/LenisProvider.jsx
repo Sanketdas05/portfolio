@@ -11,12 +11,9 @@ export function LenisProvider({ children }) {
   const [lenis, setLenis] = useState(null);
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     const instance = new Lenis({
-      // When user prefers reduced motion, set lerp to 1 so scroll is instant (no smooth easing)
-      lerp: prefersReduced ? 1 : 0.1,
-      smoothWheel: !prefersReduced,
+      lerp: 0.1,
+      smoothWheel: true,
     });
 
     function raf(time) {
