@@ -152,7 +152,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-[var(--color-bg-elevated)] z-[90] px-6 md:px-12 py-12 pt-24 flex flex-col justify-between"
+            className="fixed inset-0 bg-[var(--color-bg-elevated)] z-[90] px-6 md:px-12 pt-32 pb-12 flex flex-col justify-between"
           >
             <nav className="flex flex-col gap-6">
               {/* Mobile Mode Switcher Removed (Moved to top bar) */}
