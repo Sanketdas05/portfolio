@@ -35,7 +35,7 @@ const PROCESS_STEPS = [
 
 export default function AboutProcess() {
   return (
-    <div className="w-full relative py-32 md:py-48 flex flex-col items-center overflow-hidden">
+    <div className="w-full relative py-32 pb-[120vh] md:pb-48 md:py-48 flex flex-col items-center">
       
       {/* Drafting Table Background */}
       <div className="absolute inset-0 pointer-events-none opacity-10">
