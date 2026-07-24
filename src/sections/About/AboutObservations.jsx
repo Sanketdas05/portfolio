@@ -21,7 +21,7 @@ export default function AboutObservations() {
           transition={{ duration: 1.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="w-full md:w-1/2 text-left pl-8 md:pl-16"
         >
-          <p className="font-mono text-[11px] md:text-[13px] text-[#7a7167] leading-[1.8] tracking-wider uppercase">
+          <p className="font-mono text-[11px] md:text-[13px] top-3.5 text-[#7a7167] leading-[1.8] tracking-wider uppercase">
             Users don't notice smooth easing.<br/>
             <span className="text-[#c4653a]">They notice when it feels wrong.</span>
           </p>
