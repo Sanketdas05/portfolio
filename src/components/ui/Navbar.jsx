@@ -61,9 +61,11 @@ export default function Navbar() {
     <React.Fragment>
       <header
         className={`fixed top-0 w-full z-[var(--z-nav)] transition-all duration-700 ${
-          scrolled 
-            ? 'bg-[var(--color-glass)] backdrop-blur-md border-b border-[var(--color-border)] h-16 md:h-20' 
-            : 'bg-transparent h-20 md:h-24'
+          isOpen 
+            ? 'bg-transparent h-20 md:h-24' 
+            : scrolled 
+              ? 'bg-[var(--color-glass)] backdrop-blur-md border-b border-[var(--color-border)] h-16 md:h-20' 
+              : 'bg-transparent h-20 md:h-24'
         }`}
       >
         <div 
