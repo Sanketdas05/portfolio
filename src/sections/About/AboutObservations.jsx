@@ -5,7 +5,7 @@ export default function AboutObservations() {
     <div className="w-full min-h-[120vh] py-32 flex flex-col justify-start items-center px-[var(--container-padding)] relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
       
       {/* Chapter Marker — in flow so it always renders above the quotes */}
-      <div className="w-full max-w-5xl mb-16 md:mb-24 relative z-10">
+      <div className="w-full max-w-5xl mb-16 md:mb-32 relative z-10">
         <span className="text-[10px] text-[var(--color-accent)] font-bold font-mono tracking-widest uppercase block">
           [ 05 / Observations ]
         </span>
