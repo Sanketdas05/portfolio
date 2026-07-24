@@ -85,14 +85,14 @@ export default function Navbar() {
                 }
               }
             }}
-            className="font-body text-[var(--text-sm)] font-bold tracking-wide text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-300 block relative z-10"
+            className={`font-body text-[var(--text-sm)] font-bold tracking-wide text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-300 block relative z-10 ${isOpen ? 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto' : ''}`}
           >
             Sanket Das
           </RouterLink>
 
           {/* MODE SWITCHER */}
           <div 
-            className="flex items-center bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-full p-1 shadow-sm text-[11px] sm:text-[13px] font-medium absolute w-[140px] sm:w-[200px]"
+            className={`flex items-center bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-full p-1 shadow-sm text-[11px] sm:text-[13px] font-medium absolute w-[140px] sm:w-[200px] transition-opacity duration-300 ${isOpen ? 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto' : ''}`}
             style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}
           >
             <div className="relative flex w-full">
