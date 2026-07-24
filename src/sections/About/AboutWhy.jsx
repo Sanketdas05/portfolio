@@ -25,7 +25,7 @@ export default function AboutWhy() {
 
   return (
     <div 
-      className="w-full flex flex-col justify-start items-center px-[var(--container-padding)] relative pb-32"
+      className="w-full flex flex-col justify-start items-center px-6 md:px-12 relative pb-32"
       style={{ paddingTop: '15vh' }}
     >
       

@@ -69,7 +69,7 @@ export default function Navbar() {
         }`}
       >
         <div 
-          className="w-full mx-auto h-full px-[var(--container-padding)] flex items-center justify-between max-w-[var(--container-max)] relative"
+          className="w-full mx-auto h-full px-6 md:px-12 flex items-center justify-between max-w-[var(--container-max)] relative"
           style={{ position: 'relative' }}
         >
           
@@ -152,7 +152,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-[var(--color-bg-elevated)] z-[90] p-[var(--container-padding)] pt-24 flex flex-col justify-between"
+            className="fixed inset-0 bg-[var(--color-bg-elevated)] z-[90] px-6 md:px-12 py-12 pt-24 flex flex-col justify-between"
           >
             <nav className="flex flex-col gap-6">
               {/* Mobile Mode Switcher Removed (Moved to top bar) */}

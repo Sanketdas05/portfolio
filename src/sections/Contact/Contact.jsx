@@ -50,7 +50,7 @@ export default function Contact() {
     <section 
       id="contact" 
       ref={containerRef}
-      className="relative min-h-[140vh] flex flex-col items-center justify-center pt-32 pb-32 px-[var(--container-padding)] overflow-hidden"
+      className="relative min-h-[140vh] flex flex-col items-center justify-center pt-32 pb-32 px-6 md:px-12 overflow-hidden"
     >
       <motion.div 
         className="max-w-2xl mx-auto w-full flex flex-col items-center text-center relative z-10 flex-grow justify-center"

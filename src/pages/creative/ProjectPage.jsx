@@ -23,7 +23,7 @@ export default function ProjectPage() {
 
   if (!project) {
     return (
-      <section className="min-h-screen flex flex-col items-center justify-center px-[var(--container-padding)]">
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12">
         <h2 className="text-[var(--text-2xl)] font-heading font-bold uppercase mb-4">Room Not Found</h2>
         <RouterLink to="/creative#work" className="font-body text-[var(--text-sm)] text-[var(--color-accent)] hover:underline uppercase tracking-wider">Return to Exhibition</RouterLink>
       </section>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutDetails() {
   return (
-    <div className="w-full flex flex-col justify-start items-center px-[var(--container-padding)] relative pb-32" style={{ paddingTop: '15vh' }}>
+    <div className="w-full flex flex-col justify-start items-center px-6 md:px-12 relative pb-32" style={{ paddingTop: '15vh' }}>
       
       {/* Chapter Marker */}
       <div className="absolute top-12 left-12 md:top-24 md:left-24 z-10">

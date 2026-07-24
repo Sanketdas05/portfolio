@@ -141,7 +141,7 @@ export default function Work() {
     <section 
       ref={sectionRef}
       id="work" 
-      className="min-h-screen py-16 px-[var(--container-padding)] border-b border-[var(--color-border)] relative overflow-hidden flex flex-col justify-between z-10"
+      className="min-h-screen py-16 px-6 md:px-12 border-b border-[var(--color-border)] relative overflow-hidden flex flex-col justify-between z-10"
     >
       
       {/* ═══ CURTAIN OVERLAYS (scroll-driven) ═══ */}

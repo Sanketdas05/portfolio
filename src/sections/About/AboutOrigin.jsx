@@ -17,7 +17,7 @@ export default function AboutOrigin() {
       initial="rest"
       whileHover="hover"
       onMouseMove={handleMouseMove}
-      className="w-full min-h-screen py-32 flex flex-col justify-center items-center px-[var(--container-padding)] relative group overflow-hidden"
+      className="w-full min-h-screen py-32 flex flex-col justify-center items-center px-6 md:px-12 relative group overflow-hidden"
     >
       
       {/* Local Ambient Mouse Glow */}

@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="min-h-[calc(100vh-6rem)] flex flex-col justify-between pt-32 pb-8 px-[var(--container-padding)] max-w-[var(--container-max)] mx-auto w-full relative z-10"
+      className="min-h-[calc(100vh-6rem)] flex flex-col justify-between pt-32 pb-8 px-6 md:px-12 max-w-[var(--container-max)] mx-auto w-full relative z-10"
     >
       
       {/* Background Visual Elements */}
