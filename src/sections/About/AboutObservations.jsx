@@ -4,14 +4,14 @@ export default function AboutObservations() {
   return (
     <div className="w-full min-h-[120vh] py-32 flex flex-col justify-start items-center px-[var(--container-padding)] relative bg-[var(--color-bg-deep)] text-[#f5f0eb] overflow-hidden border-t border-[rgba(245,240,235,0.05)]">
       
-      {/* Chapter Marker */}
-      <div className="absolute top-12 left-12 md:top-24 md:left-24 z-10">
+      {/* Chapter Marker — in flow so it always renders above the quotes */}
+      <div className="w-full max-w-5xl mb-16 md:mb-24 relative z-10">
         <span className="text-[10px] text-[var(--color-accent)] font-bold font-mono tracking-widest uppercase block">
           [ 05 / Observations ]
         </span>
       </div>
 
-      <div className="max-w-5xl w-full flex flex-col relative z-10 mt-32 md:mt-48 gap-48 md:gap-64">
+      <div className="max-w-5xl w-full flex flex-col relative z-10 gap-24 md:gap-48 lg:gap-64">
         
         {/* Note 1: Left */}
         <motion.div 
